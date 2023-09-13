@@ -26,7 +26,7 @@ const GSLTokenModalFeature = () => {
     useEffect(() => {
         if (!connected || !instance || status === 'running') return;
 
-        const errors = ['(gsl token expired)', '(account not found)', 'Invalid Steam account token was specified.'];
+        const errors = ['(gsl token expired)', '(account not found)', 'invalid steam account token was specified'];
 
         const listener = (line: string) => {
             if (errors.some((p) => line.toLowerCase().includes(p))) {
